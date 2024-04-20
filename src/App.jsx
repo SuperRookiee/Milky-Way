@@ -1,13 +1,23 @@
+import {useEffect} from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {useAuthState} from "react-firebase-hooks/auth";
+import {auth} from "./firebase/firebase";
 import HomePage from "./pages/HomePage/HomePage";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import PageLayout from "./Layouts/PageLayout/PageLayout";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
-import {auth} from "./firebase/firebase";
 
 const App = () => {
     const [authUser] = useAuthState(auth);
+
+    useEffect(() => {
+        const unloadCallback = () => {
+            auth.app().delete();
+
+        }
+        window.addEventListener("beforeunload", unloadCallback);
+        return () => window.removeEventListener("beforeunload", unloadCallback);
+    }, []);
 
     return (
         <PageLayout>

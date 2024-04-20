@@ -2,7 +2,7 @@ import {Flex, Image, Text} from "@chakra-ui/react";
 import {useSignInWithGoogle} from "react-firebase-hooks/auth";
 import {auth, firestore} from "../../firebase/firebase.js";
 import useShowToast from "../../hooks/useShowToast.js";
-import useAuthStore from "../../store/authStore.js";
+import useAuthStore from "../../store/authStore.ts";
 import {doc, getDoc, setDoc} from "firebase/firestore";
 
 const GoogleAuth = ({ prefix }) => {

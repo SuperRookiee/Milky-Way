@@ -1,5 +1,5 @@
 import {useState} from "react";
-import useAuthStore from "../store/authStore.js";
+import useAuthStore from "../store/authStore.ts";
 import useShowToast from "./useShowToast.js";
 import {getDownloadURL, ref, uploadString} from "firebase/storage";
 import {firestore, storage} from "../firebase/firebase.js";

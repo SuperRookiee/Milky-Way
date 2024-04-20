@@ -1,6 +1,6 @@
 import {Avatar, Button, Flex, Text} from "@chakra-ui/react";
 import useLogout from "../../hooks/useLogout.js";
-import useAuthStore from "../../store/authStore.js";
+import useAuthStore from "../../store/authStore.ts";
 import {Link} from "react-router-dom";
 
 const SuggestedHeader = () => {
@@ -23,7 +23,6 @@ const SuggestedHeader = () => {
 			</Flex>
 			<Button
 				size='xs'
-				background='transparent'
 				_hover={{ background: "transparent" }}
 				fontSize={14}
 				fontWeight='medium'

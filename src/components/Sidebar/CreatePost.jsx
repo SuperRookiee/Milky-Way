@@ -1,10 +1,28 @@
-import {Box, Button, CloseButton, Flex, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Textarea, Tooltip, useDisclosure,} from "@chakra-ui/react";
+import {
+	Box,
+	Button,
+	CloseButton,
+	Flex,
+	Image,
+	Input,
+	Modal,
+	ModalBody,
+	ModalCloseButton,
+	ModalContent,
+	ModalFooter,
+	ModalHeader,
+	ModalOverlay,
+	Textarea,
+	Tooltip,
+	useColorModeValue,
+	useDisclosure,
+} from "@chakra-ui/react";
 import {CreatePostLogo} from "../../assets/constants.jsx";
 import {BsFillImageFill} from "react-icons/bs";
 import {useRef, useState} from "react";
 import usePreviewImg from "../../hooks/usePreviewImg.js";
 import useShowToast from "../../hooks/useShowToast.js";
-import useAuthStore from "../../store/authStore.js";
+import useAuthStore from "../../store/authStore.ts";
 import usePostStore from "../../store/postStore.js";
 import useUserProfileStore from "../../store/userProfileStore.js";
 import {useLocation} from "react-router-dom";
@@ -38,7 +56,7 @@ const CreatePost = () => {
 				label='Create'
 				placement='right'
 				ml={1}
-				openDelay={500}
+				openDelay={300}
 				display={{ base: "block", md: "none" }}
 			>
 				<Flex
@@ -51,7 +69,7 @@ const CreatePost = () => {
 					justifyContent={{ base: "center", md: "flex-start" }}
 					onClick={onOpen}
 				>
-					<CreatePostLogo />
+					<CreatePostLogo/>
 					<Box display={{ base: "none", md: "block" }}>Create</Box>
 				</Flex>
 			</Tooltip>

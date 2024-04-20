@@ -1,6 +1,6 @@
 import {Avatar, Box, Button, Flex, VStack} from "@chakra-ui/react";
 import useFollowUser from "../../hooks/useFollowUser.js";
-import useAuthStore from "../../store/authStore.js";
+import useAuthStore from "../../store/authStore.ts";
 import {Link} from "react-router-dom";
 
 const SuggestedUser = ({ user, setUser }) => {
@@ -34,7 +34,7 @@ const SuggestedUser = ({ user, setUser }) => {
 					</Box>
 				</VStack>
 			</Flex>
-			{authUser.uid !== user.uid && (
+			{authUser?.uid !== user.uid && (
 				<Button
 					fontSize={13}
 					bg='transparent'

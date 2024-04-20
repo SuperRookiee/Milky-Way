@@ -8,6 +8,7 @@ import SidebarItems from "./SidebarItems.jsx";
 
 const Sidebar = () => {
 	const { handleLogout, isLoggingOut } = useLogout();
+
 	return (
 		<Box
 			height='100vh'
@@ -21,7 +22,7 @@ const Sidebar = () => {
 		>
 			<Flex direction='column' gap={10} w='full' height='full'>
 				<Link to='/' as={RouterLink} pl={2} display={{ base: "none", md: "block" }} cursor='pointer'>
-					<InstagramLogo />
+					<InstagramLogo/>
 				</Link>
 				<Link
 					to='/'
@@ -35,7 +36,7 @@ const Sidebar = () => {
 					w={10}
 					cursor='pointer'
 				>
-					<InstagramMobileLogo />
+					<InstagramMobileLogo/>
 				</Link>
 				<Flex direction='column' gap={5} cursor='pointer'>
 					<SidebarItems />
@@ -47,7 +48,7 @@ const Sidebar = () => {
 					label='Logout'
 					placement='right'
 					ml={1}
-					openDelay={500}
+					openDelay={300}
 					display={{ base: "block", md: "none" }}
 				>
 					<Flex

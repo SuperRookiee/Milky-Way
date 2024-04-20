@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import usePostStore from "../store/postStore.js";
-import useAuthStore from "../store/authStore.js";
+import useAuthStore from "../store/authStore.ts";
 import useShowToast from "./useShowToast.js";
 import useUserProfileStore from "../store/userProfileStore.js";
 import {collection, getDocs, query, where} from "firebase/firestore";
