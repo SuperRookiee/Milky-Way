@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import useAuthStore from "../store/authStore.js";
 import useUserProfileStore from "../store/userProfileStore.js";
 import useShowToast from "./useShowToast.js";
-import { firestore } from "../firebase/firebase.js";
-import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
+import {firestore} from "../firebase/firebase.js";
+import {arrayRemove, arrayUnion, doc, updateDoc} from "firebase/firestore";
 
 const useFollowUser = (userId) => {
 	const [isUpdating, setIsUpdating] = useState(false);

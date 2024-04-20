@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import usePostStore from "../store/postStore.js";
 import useAuthStore from "../store/authStore.js";
 import useShowToast from "./useShowToast.js";
 import useUserProfileStore from "../store/userProfileStore.js";
-import { collection, getDocs, query, where } from "firebase/firestore";
-import { firestore } from "../firebase/firebase.js";
+import {collection, getDocs, query, where} from "firebase/firestore";
+import {firestore} from "../firebase/firebase.js";
 
 const useGetFeedPosts = () => {
 	const [isLoading, setIsLoading] = useState(true);

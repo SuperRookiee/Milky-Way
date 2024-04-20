@@ -1,33 +1,16 @@
-import {
-	Box,
-	Button,
-	CloseButton,
-	Flex,
-	Image,
-	Input,
-	Modal,
-	ModalBody,
-	ModalCloseButton,
-	ModalContent,
-	ModalFooter,
-	ModalHeader,
-	ModalOverlay,
-	Textarea,
-	Tooltip,
-	useDisclosure,
-} from "@chakra-ui/react";
-import { CreatePostLogo } from "../../assets/constants.jsx";
-import { BsFillImageFill } from "react-icons/bs";
-import { useRef, useState } from "react";
+import {Box, Button, CloseButton, Flex, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Textarea, Tooltip, useDisclosure,} from "@chakra-ui/react";
+import {CreatePostLogo} from "../../assets/constants.jsx";
+import {BsFillImageFill} from "react-icons/bs";
+import {useRef, useState} from "react";
 import usePreviewImg from "../../hooks/usePreviewImg.js";
 import useShowToast from "../../hooks/useShowToast.js";
 import useAuthStore from "../../store/authStore.js";
 import usePostStore from "../../store/postStore.js";
 import useUserProfileStore from "../../store/userProfileStore.js";
-import { useLocation } from "react-router-dom";
-import { addDoc, arrayUnion, collection, doc, updateDoc } from "firebase/firestore";
-import { firestore, storage } from "../../firebase/firebase.js";
-import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import {useLocation} from "react-router-dom";
+import {addDoc, arrayUnion, collection, doc, updateDoc} from "firebase/firestore";
+import {firestore, storage} from "../../firebase/firebase.js";
+import {getDownloadURL, ref, uploadString} from "firebase/storage";
 
 const CreatePost = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,14 +35,14 @@ const CreatePost = () => {
 		<>
 			<Tooltip
 				hasArrow
-				label={"Create"}
+				label='Create'
 				placement='right'
 				ml={1}
 				openDelay={500}
 				display={{ base: "block", md: "none" }}
 			>
 				<Flex
-					alignItems={"center"}
+					alignItems='center'
 					gap={4}
 					_hover={{ bg: "whiteAlpha.400" }}
 					borderRadius={6}
@@ -73,15 +56,16 @@ const CreatePost = () => {
 				</Flex>
 			</Tooltip>
 
-			<Modal isOpen={isOpen} onClose={onClose} size='xl'>
+			<Modal isOpen={isOpen} onClose={onClose} size='xl' isCentered>
 				<ModalOverlay />
 
-				<ModalContent bg={"black"} border={"1px solid gray"}>
+				<ModalContent bg='black' border='1px solid gray'>
 					<ModalHeader>Create Post</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pb={6}>
 						<Textarea
 							placeholder='Post caption...'
+							height={200}
 							value={caption}
 							onChange={(e) => setCaption(e.target.value)}
 						/>
@@ -94,10 +78,10 @@ const CreatePost = () => {
 							size={16}
 						/>
 						{selectedFile && (
-							<Flex mt={5} w={"full"} position={"relative"} justifyContent={"center"}>
+							<Flex mt={5} w='full' position='relative' justifyContent='center'>
 								<Image src={selectedFile} alt='Selected img' />
 								<CloseButton
-									position={"absolute"}
+									position='absolute'
 									top={2}
 									right={2}
 									onClick={() => {
@@ -168,64 +152,4 @@ function useCreatePost() {
 	};
 
 	return { isLoading, handleCreatePost };
-}
-
-// 1- COPY AND PASTE AS THE STARTER CODE FOR THE CRAETEPOST COMPONENT
-// import { Box, Flex, Tooltip } from "@chakra-ui/react";
-// import { CreatePostLogo } from "../../assets/constants";
-
-// const CreatePost = () => {
-// 	return (
-// 		<>
-// 			<Tooltip
-// 				hasArrow
-// 				label={"Create"}
-// 				placement='right'
-// 				ml={1}
-// 				openDelay={500}
-// 				display={{ base: "block", md: "none" }}
-// 			>
-// 				<Flex
-// 					alignItems={"center"}
-// 					gap={4}
-// 					_hover={{ bg: "whiteAlpha.400" }}
-// 					borderRadius={6}
-// 					p={2}
-// 					w={{ base: 10, md: "full" }}
-// 					justifyContent={{ base: "center", md: "flex-start" }}
-// 				>
-// 					<CreatePostLogo />
-// 					<Box display={{ base: "none", md: "block" }}>Create</Box>
-// 				</Flex>
-// 			</Tooltip>
-// 		</>
-// 	);
-// };
-
-// export default CreatePost;
-
-// 2-COPY AND PASTE FOR THE MODAL
-{
-	/* <Modal isOpen={isOpen} onClose={onClose} size='xl'>
-				<ModalOverlay />
-
-				<ModalContent bg={"black"} border={"1px solid gray"}>
-					<ModalHeader>Create Post</ModalHeader>
-					<ModalCloseButton />
-					<ModalBody pb={6}>
-						<Textarea placeholder='Post caption...' />
-
-						<Input type='file' hidden />
-
-						<BsFillImageFill
-							style={{ marginTop: "15px", marginLeft: "5px", cursor: "pointer" }}
-							size={16}
-						/>
-					</ModalBody>
-
-					<ModalFooter>
-						<Button mr={3}>Post</Button>
-					</ModalFooter>
-				</ModalContent>
-			</Modal> */
 }

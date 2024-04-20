@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
+import {Box, Flex, Link, Text, VStack} from "@chakra-ui/react";
 import SuggestedHeader from "./SuggestedHeader.jsx";
 import SuggestedUser from "./SuggestedUser.jsx";
 import useGetSuggestedUsers from "../../hooks/useGetSuggestedUsers.js";
@@ -14,11 +14,11 @@ const SuggestedUsers = () => {
 			<SuggestedHeader />
 
 			{suggestedUsers.length !== 0 && (
-				<Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
-					<Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
+				<Flex alignItems='center' justifyContent='space-between' w='full'>
+					<Text fontSize={12} fontWeight='bold' color='gray.500'>
 						Suggested for you
 					</Text>
-					<Text fontSize={12} fontWeight={"bold"} _hover={{ color: "gray.400" }} cursor={"pointer"}>
+					<Text fontSize={12} fontWeight='bold' _hover={{ color: "gray.400" }} cursor='pointer'>
 						See All
 					</Text>
 				</Flex>
@@ -28,8 +28,8 @@ const SuggestedUsers = () => {
 				<SuggestedUser user={user} key={user.id} />
 			))}
 
-			<Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
-				© 2024 Built By{" "}
+			<Box fontSize={12} color='gray.500' mt={5} alignSelf='start'>
+				© 2024 Built By' '
 				<Link href='https://github.com/SuperRookiee/Milky-Way' target='_blank' color='blue.500' fontSize={14}>
 					As a SuperRookiee
 				</Link>

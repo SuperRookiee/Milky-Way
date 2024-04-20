@@ -1,8 +1,8 @@
-import { useState } from "react";
+import {useState} from "react";
 import useAuthStore from "../store/authStore.js";
 import useShowToast from "./useShowToast.js";
-import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
-import { firestore } from "../firebase/firebase.js";
+import {arrayRemove, arrayUnion, doc, updateDoc} from "firebase/firestore";
+import {firestore} from "../firebase/firebase.js";
 
 const useLikePost = (post) => {
 	const [isUpdating, setIsUpdating] = useState(false);

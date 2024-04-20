@@ -1,22 +1,22 @@
-import { Box, Link, Tooltip } from "@chakra-ui/react";
-import { AiFillHome } from "react-icons/ai";
-import { Link as RouterLink } from "react-router-dom";
+import {Box, Link, Tooltip} from "@chakra-ui/react";
+import {AiFillHome} from "react-icons/ai";
+import {Link as RouterLink} from "react-router-dom";
 
 const Home = () => {
 	return (
 		<Tooltip
 			hasArrow
-			label={"Home"}
+			label='Home'
 			placement='right'
 			ml={1}
 			openDelay={500}
 			display={{ base: "block", md: "none" }}
 		>
 			<Link
-				display={"flex"}
-				to={"/"}
+				display='flex'
+				to='/'
 				as={RouterLink}
-				alignItems={"center"}
+				alignItems='center'
 				gap={4}
 				_hover={{ bg: "whiteAlpha.400" }}
 				borderRadius={6}

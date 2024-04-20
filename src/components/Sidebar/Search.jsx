@@ -14,9 +14,9 @@ import {
 	Tooltip,
 	useDisclosure,
 } from "@chakra-ui/react";
-import { SearchLogo } from "../../assets/constants.jsx";
+import {SearchLogo} from "../../assets/constants.jsx";
 import useSearchUser from "../../hooks/useSearchUser.js";
-import { useRef } from "react";
+import {useRef} from "react";
 import SuggestedUser from "../SuggestedUsers/SuggestedUser.jsx";
 
 const Search = () => {
@@ -33,14 +33,14 @@ const Search = () => {
 		<>
 			<Tooltip
 				hasArrow
-				label={"Search"}
+				label='Search'
 				placement='right'
 				ml={1}
 				openDelay={500}
 				display={{ base: "block", md: "none" }}
 			>
 				<Flex
-					alignItems={"center"}
+					alignItems='center'
 					gap={4}
 					_hover={{ bg: "whiteAlpha.400" }}
 					borderRadius={6}
@@ -54,9 +54,9 @@ const Search = () => {
 				</Flex>
 			</Tooltip>
 
-			<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
+			<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft' isCentered>
 				<ModalOverlay />
-				<ModalContent bg={"black"} border={"1px solid gray"} maxW={"400px"}>
+				<ModalContent bg='black' border='1px solid gray' maxW='400px'>
 					<ModalHeader>Search user</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pb={6}>
@@ -66,8 +66,8 @@ const Search = () => {
 								<Input placeholder='asaprogrammer' ref={searchRef} />
 							</FormControl>
 
-							<Flex w={"full"} justifyContent={"flex-end"}>
-								<Button type='submit' ml={"auto"} size={"sm"} my={4} isLoading={isLoading}>
+							<Flex w='full' justifyContent='flex-end'>
+								<Button type='submit' ml='auto' size='sm' my={4} isLoading={isLoading}>
 									Search
 								</Button>
 							</Flex>
@@ -91,14 +91,14 @@ export default Search;
 // 		<>
 // 			<Tooltip
 // 				hasArrow
-// 				label={"Search"}
+// 				label='Search'
 // 				placement='right'
 // 				ml={1}
 // 				openDelay={500}
 // 				display={{ base: "block", md: "none" }}
 // 			>
 // 				<Flex
-// 					alignItems={"center"}
+// 					alignItems='center'
 // 					gap={4}
 // 					_hover={{ bg: "whiteAlpha.400" }}
 // 					borderRadius={6}

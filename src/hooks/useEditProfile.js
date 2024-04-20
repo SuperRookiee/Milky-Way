@@ -1,9 +1,9 @@
-import { useState } from "react";
+import {useState} from "react";
 import useAuthStore from "../store/authStore.js";
 import useShowToast from "./useShowToast.js";
-import { getDownloadURL, ref, uploadString } from "firebase/storage";
-import { firestore, storage } from "../firebase/firebase.js";
-import { doc, updateDoc } from "firebase/firestore";
+import {getDownloadURL, ref, uploadString} from "firebase/storage";
+import {firestore, storage} from "../firebase/firebase.js";
+import {doc, updateDoc} from "firebase/firestore";
 import useUserProfileStore from "../store/userProfileStore.js";
 
 const useEditProfile = () => {

@@ -1,6 +1,6 @@
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { Alert, AlertIcon, Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
-import { useState } from "react";
+import {ViewIcon, ViewOffIcon} from "@chakra-ui/icons";
+import {Alert, AlertIcon, Button, Input, InputGroup} from "@chakra-ui/react";
+import {useState} from "react";
 import useSignUpWithEmailAndPassword from "../../hooks/useSignUpWithEmailAndPassword.js";
 
 const Signup = () => {
@@ -19,7 +19,7 @@ const Signup = () => {
 				placeholder='Email'
 				fontSize={14}
 				type='email'
-				size={"sm"}
+				size='sm'
 				value={inputs.email}
 				onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
 			/>
@@ -27,7 +27,7 @@ const Signup = () => {
 				placeholder='Username'
 				fontSize={14}
 				type='text'
-				size={"sm"}
+				size='sm'
 				value={inputs.username}
 				onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
 			/>
@@ -35,7 +35,7 @@ const Signup = () => {
 				placeholder='Full Name'
 				fontSize={14}
 				type='text'
-				size={"sm"}
+				size='sm'
 				value={inputs.fullName}
 				onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
 			/>
@@ -45,11 +45,11 @@ const Signup = () => {
 					fontSize={14}
 					type={showPassword ? "text" : "password"}
 					value={inputs.password}
-					size={"sm"}
+					size='sm'
 					onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
 				/>
 				<InputRightElement h='full'>
-					<Button variant={"ghost"} size={"sm"} onClick={() => setShowPassword(!showPassword)}>
+					<Button variant='ghost' size='sm' onClick={() => setShowPassword(!showPassword)}>
 						{showPassword ? <ViewIcon /> : <ViewOffIcon />}
 					</Button>
 				</InputRightElement>
@@ -63,9 +63,9 @@ const Signup = () => {
 			)}
 
 			<Button
-				w={"full"}
+				w='full'
 				colorScheme='blue'
-				size={"sm"}
+				size='sm'
 				fontSize={14}
 				isLoading={loading}
 				onClick={() => signup(inputs)}

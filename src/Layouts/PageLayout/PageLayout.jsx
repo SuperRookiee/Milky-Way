@@ -1,11 +1,9 @@
-import { Box, Flex, Spinner } from "@chakra-ui/react";
-import Sidebar from "../../components/Sidebar/Sidebar.jsx";
-import { useLocation } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase/firebase.js";
-import Navbar from "../../components/Navbar/Navbar.jsx";
-
-// instead of adding the Sidebar component to every page, we can add it only once to the PageLayout component and wrap the children with it. This way, we can have a sidebar on every page except the AuthPage.
+import {Box, Flex, Spinner} from "@chakra-ui/react";
+import {useLocation} from "react-router-dom";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {auth} from "../../firebase/firebase";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Navbar from "../../components/Navbar/Navbar";
 
 const PageLayout = ({ children }) => {
 	const { pathname } = useLocation();
@@ -27,7 +25,7 @@ const PageLayout = ({ children }) => {
 			{/* Navbar */}
 			{canRenderNavbar ? <Navbar /> : null}
 			{/* the page content on the right */}
-			<Box flex={1} w={{ base: "calc(100% - 70px)", md: "calc(100% - 240px)" }} mx={"auto"}>
+			<Box flex={1} w={{ base: "calc(100% - 70px)", md: "calc(100% - 240px)" }} mx='auto'>
 				{children}
 			</Box>
 		</Flex>
