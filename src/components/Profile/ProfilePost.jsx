@@ -9,7 +9,7 @@ import useAuthStore from "../../store/authStore.ts";
 import useShowToast from "../../hooks/useShowToast.js";
 import {useState} from "react";
 import {deleteObject, ref} from "firebase/storage";
-import {firestore, storage} from "../../firebase/firebase.js";
+import {firestore, storage} from "@/firebase/firebase.ts";
 import {arrayRemove, deleteDoc, doc, updateDoc} from "firebase/firestore";
 import usePostStore from "../../store/postStore.js";
 import Caption from "../Comment/Caption.jsx";

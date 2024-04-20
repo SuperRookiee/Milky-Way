@@ -1,7 +1,7 @@
 import {Box, Flex, Spinner} from "@chakra-ui/react";
 import {useLocation} from "react-router-dom";
 import {useAuthState} from "react-firebase-hooks/auth";
-import {auth} from "../../firebase/firebase";
+import {auth} from "@/firebase/firebase";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorMode from "../../components/ColorMode/ColorMode.jsx";

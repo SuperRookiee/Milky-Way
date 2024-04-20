@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import {mode} from "@chakra-ui/theme-tools";
+import type {GlobalStyleProps} from "@chakra-ui/theme-tools"
 
 const theme = extendTheme({
     config: {
@@ -7,7 +8,7 @@ const theme = extendTheme({
         useSystemColorMode: true,
     },
     styles: {
-        global: (props) => ({
+        global: (props: GlobalStyleProps) => ({
             body: {
                 bg: mode("gray.100", "#000")(props),
                 color: mode("gray.800", "whiteAlpha.900")(props),
@@ -20,7 +21,7 @@ const theme = extendTheme({
     },
     components: {
         Modal: {
-            baseStyle: (props) => ({
+            baseStyle: (props: GlobalStyleProps) => ({
                 dialog: {
                     bg: mode("gray.100", "#000")(props),
                     color: mode("gray.800", "whiteAlpha.900")(props),

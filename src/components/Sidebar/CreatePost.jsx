@@ -27,7 +27,7 @@ import usePostStore from "../../store/postStore.js";
 import useUserProfileStore from "../../store/userProfileStore.js";
 import {useLocation} from "react-router-dom";
 import {addDoc, arrayUnion, collection, doc, updateDoc} from "firebase/firestore";
-import {firestore, storage} from "../../firebase/firebase.js";
+import {firestore, storage} from "../../firebase/firebase.ts";
 import {getDownloadURL, ref, uploadString} from "firebase/storage";
 
 const CreatePost = () => {

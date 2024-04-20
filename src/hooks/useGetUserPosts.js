@@ -3,7 +3,7 @@ import usePostStore from "../store/postStore.js";
 import useShowToast from "./useShowToast.js";
 import useUserProfileStore from "../store/userProfileStore.js";
 import {collection, getDocs, query, where} from "firebase/firestore";
-import {firestore} from "../firebase/firebase.js";
+import {firestore} from "@/firebase/firebase.ts";
 
 const useGetUserPosts = () => {
 	const [isLoading, setIsLoading] = useState(true);
