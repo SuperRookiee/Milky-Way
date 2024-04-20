@@ -1,7 +1,10 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&height=190&text=Milky%20Way&fontAlign=25&fontAlignY=40&color=gradient)
 
-![js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) &ensp;
-![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+![js](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)&ensp;
+![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black)&ensp;
+![js](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white)&ensp;
+![js](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)&ensp;
+![js](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)&ensp;
 
 
 ## Instagram Clone Project
