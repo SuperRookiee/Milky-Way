@@ -10,5 +10,5 @@
 ## Demo
 You can check out the demo site at [https://milkyway-universes.web.app](https://milkyway-universes.web.app).
 
-### References
+## References
 This project was created with reference to the Git project at [burakorkmez/instagram-clone](https://github.com/burakorkmez/instagram-clone)
