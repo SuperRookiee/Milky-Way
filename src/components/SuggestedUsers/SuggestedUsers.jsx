@@ -1,4 +1,4 @@
-import {Box, Flex, Link, Text, VStack} from "@chakra-ui/react";
+import {Box, Divider, Flex, Link, Text, VStack} from "@chakra-ui/react";
 import SuggestedHeader from "./SuggestedHeader.jsx";
 import SuggestedUser from "./SuggestedUser.jsx";
 import useGetSuggestedUsers from "../../hooks/useGetSuggestedUsers.js";
@@ -12,6 +12,7 @@ const SuggestedUsers = () => {
 	return (
 		<VStack py={8} px={6} gap={4}>
 			<SuggestedHeader />
+			<Divider />
 			{suggestedUsers.length !== 0 && (
 				<Flex alignItems='center' justifyContent='space-between' w='full'>
 					<Text fontSize={12} fontWeight='bold' color='gray.500'>
@@ -28,7 +29,7 @@ const SuggestedUsers = () => {
 			))}
 
 			<Box fontSize={12} color='gray.500' mt={5} alignSelf='start'>
-				© 2024 Built By' '
+				© 2024 Built By{' '}
 				<Link href='https://github.com/SuperRookiee/Milky-Way' target='_blank' color='blue.500' fontSize={14}>
 					As a SuperRookiee
 				</Link>

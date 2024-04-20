@@ -11,10 +11,7 @@ const App = () => {
     const [authUser] = useAuthState(auth);
 
     useEffect(() => {
-        const unloadCallback = () => {
-            auth.app().delete();
-
-        }
+        const unloadCallback = () => auth.app().delete()
         window.addEventListener("beforeunload", unloadCallback);
         return () => window.removeEventListener("beforeunload", unloadCallback);
     }, []);

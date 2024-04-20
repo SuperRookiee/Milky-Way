@@ -41,7 +41,7 @@ const Search = () => {
 
 			<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft' isCentered>
 				<ModalOverlay />
-				<ModalContent bg='black' border='1px solid gray' maxW='400px'>
+				<ModalContent border='1px solid gray' maxW='400px'>
 					<ModalHeader>Search user</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pb={6}>

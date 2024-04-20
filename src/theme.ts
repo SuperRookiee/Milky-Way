@@ -15,9 +15,19 @@ const theme = extendTheme({
             svg: {
                 color: mode("#000", "#fff")(props),
                 fill: mode("#000", "#fff")(props),
-            }
+            },
         }),
     },
+    components: {
+        Modal: {
+            baseStyle: (props) => ({
+                dialog: {
+                    bg: mode("gray.100", "#000")(props),
+                    color: mode("gray.800", "whiteAlpha.900")(props),
+                }
+            })
+        }
+    }
 });
 
 export default theme;
