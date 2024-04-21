@@ -1,11 +1,26 @@
-import {Avatar, Button, Divider, Flex, GridItem, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure, VStack,} from "@chakra-ui/react";
+import {
+    Avatar,
+    Button,
+    Divider,
+    Flex,
+    GridItem,
+    Image,
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalOverlay,
+    Text,
+    useDisclosure,
+    VStack,
+} from "@chakra-ui/react";
 import {AiFillHeart} from "react-icons/ai";
 import {FaComment} from "react-icons/fa";
 import {MdDelete} from "react-icons/md";
 import Comment from "../Comment/Comment.jsx";
 import PostFooter from "../FeedPosts/PostFooter.jsx";
 import useUserProfileStore from "../../store/userProfileStore.js";
-import useAuthStore from "../../store/authStore.ts";
+import useAuthStore from "@/store/authStore.js";
 import useShowToast from "../../hooks/useShowToast.js";
 import {useState} from "react";
 import {deleteObject, ref} from "firebase/storage";

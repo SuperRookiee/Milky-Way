@@ -1,6 +1,6 @@
 import {Avatar, Box, Button, Flex, VStack} from "@chakra-ui/react";
 import useFollowUser from "../../hooks/useFollowUser.js";
-import useAuthStore from "../../store/authStore.ts";
+import useAuthStore from "@/store/authStore.js";
 import {Link} from "react-router-dom";
 
 const SuggestedUser = ({ user, setUser }) => {

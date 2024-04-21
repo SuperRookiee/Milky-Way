@@ -1,6 +1,6 @@
 import {Avatar, Button, Flex, Text} from "@chakra-ui/react";
 import useLogout from "../../hooks/useLogout.js";
-import useAuthStore from "../../store/authStore.ts";
+import useAuthStore from "@/store/authStore.js";
 import {Link} from "react-router-dom";
 
 const SuggestedHeader = () => {
