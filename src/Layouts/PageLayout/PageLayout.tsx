@@ -15,9 +15,9 @@ const PageLayout = ({children}: PageLayoutProps) => {
     const {pathname} = useLocation();
     const [user, loading] = useAuthState(auth);
     const canRenderSidebar = pathname !== "/auth" && user;
-    const canRenderNavbar = !user && !loading && pathname !== "/auth";
+    const canRenderNavbar: boolean = !user && !loading && pathname !== "/auth";
+    const checkingUserIsAuth: boolean = !user && loading;
 
-    const checkingUserIsAuth = !user && loading;
     if (checkingUserIsAuth) return <PageLayoutSpinner/>;
 
     return (

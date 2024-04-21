@@ -11,7 +11,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=1000&background=FFFFFF00&multiline=true&repeat=false&random=false&width=600&height=60&lines=This+project+is+a+clone+of+Instagram;+built+using+React%2C+Vite%2C+Firebase+and+Chakra+UI.)](https://git.io/typing-svg)
 
 ## Demo
-You can check out the demo site at [https://milkyway-universes.web.app](https://milkyway-universes.web.app).
+You can check out the demo site at [https://milkyway-universes.web.app](https://milkyway-universes.web.app)
 
 ## References
 This project was created with reference to the Git project at [burakorkmez/instagram-clone](https://github.com/burakorkmez/instagram-clone)
