@@ -27,7 +27,15 @@ const theme = extendTheme({
                     color: mode("gray.800", "whiteAlpha.900")(props),
                 }
             })
-        }
+        },
+        Popover: {
+            baseStyle: (props: GlobalStyleProps) => ({
+                content: {
+                    bg: mode("gray.100", "#000")(props),
+                    color: mode("gray.800", "whiteAlpha.900")(props),
+                },
+            }),
+        },
     }
 });
 
