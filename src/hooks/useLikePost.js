@@ -23,7 +23,7 @@ const useLikePost = (post) => {
 			});
 
 			setIsLiked(!isLiked);
-			isLiked ? setLikes(likes - 1) : setLikes(likes + 1);
+			!isLiked ? setLikes(likes + 1) : setLikes(likes - 1);
 		} catch (error) {
 			showToast("Error", error.message, "error");
 		} finally {

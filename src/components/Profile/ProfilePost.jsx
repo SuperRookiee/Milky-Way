@@ -1,19 +1,4 @@
-import {
-    Avatar,
-    Button,
-    Divider,
-    Flex,
-    GridItem,
-    Image,
-    Modal,
-    ModalBody,
-    ModalCloseButton,
-    ModalContent,
-    ModalOverlay,
-    Text,
-    useDisclosure,
-    VStack,
-} from "@chakra-ui/react";
+import {Avatar, Button, Divider, Flex, GridItem, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure, VStack,} from "@chakra-ui/react";
 import {AiFillHeart} from "react-icons/ai";
 import {FaComment} from "react-icons/fa";
 import {MdDelete} from "react-icons/md";
@@ -28,6 +13,7 @@ import {firestore, storage} from "@/firebase/firebase.ts";
 import {arrayRemove, deleteDoc, doc, updateDoc} from "firebase/firestore";
 import usePostStore from "../../store/postStore.js";
 import Caption from "../Comment/Caption.jsx";
+import useLikePost from "@/hooks/useLikePost.js";
 
 const ProfilePost = ({ post }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,6 +23,7 @@ const ProfilePost = ({ post }) => {
 	const [isDeleting, setIsDeleting] = useState(false);
 	const deletePost = usePostStore((state) => state.deletePost);
 	const decrementPostsCount = useUserProfileStore((state) => state.deletePost);
+	const { isLiked, likes, handleLikePost } = useLikePost(post);
 
 	const handleDeletePost = async () => {
 		if (!window.confirm("Are you sure you want to delete this post?")) return;
@@ -91,7 +78,7 @@ const ProfilePost = ({ post }) => {
 						<Flex>
 							<AiFillHeart size={20} />
 							<Text fontWeight='bold' ml={2}>
-								{post.likes.length}
+								{likes}
 							</Text>
 						</Flex>
 
@@ -164,8 +151,13 @@ const ProfilePost = ({ post }) => {
 									))}
 								</VStack>
 								<Divider my={4} bg='gray.8000' />
-
-								<PostFooter isProfilePage={true} post={post} />
+								<PostFooter
+									post={post}
+									isProfilePage={true}
+									isLiked={isLiked}
+									likes={likes}
+									handleLikePost={handleLikePost}
+								/>
 							</Flex>
 						</Flex>
 					</ModalBody>

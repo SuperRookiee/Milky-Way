@@ -1,18 +1,16 @@
 import {Box, Button, Flex, Input, InputGroup, InputRightElement, Text, useDisclosure} from "@chakra-ui/react";
 import {useRef, useState} from "react";
 import {CommentLogo, NotificationsLogo, UnlikeLogo} from "@/assets/constants";
-import usePostComment from "../../hooks/usePostComment";
-import useLikePost from "../../hooks/useLikePost";
+import usePostComment from "@/hooks/usePostComment";
 import useAuthStore from "@/store/authStore.js";
-import {timeAgo} from "../../utils/timeAgo";
+import {timeAgo} from "@/utils/timeAgo";
 import CommentsModal from "../Modals/CommentsModal";
 
-const PostFooter = ({post, isProfilePage, creatorProfile}) => {
+const PostFooter = ({post, isProfilePage, creatorProfile, isLiked, likes, handleLikePost}) => {
     const {isCommenting, handlePostComment} = usePostComment();
     const [comment, setComment] = useState("");
     const authUser = useAuthStore((state) => state.user);
     const commentRef = useRef(null);
-    const {handleLikePost, isLiked, likes} = useLikePost(post);
     const {isOpen, onOpen, onClose} = useDisclosure();
 
     const handleSubmitComment = async () => {
@@ -43,8 +41,8 @@ const PostFooter = ({post, isProfilePage, creatorProfile}) => {
             {!isProfilePage && (
                 <>
                     <Text fontSize='sm' fontWeight={700}>
-                        {creatorProfile?.username}' '
-                        <Text as='span' fontWeight={400}>
+                        {creatorProfile?.username}
+                        <Text as='span' fontWeight={400} ml={1}>
                             {post.caption}
                         </Text>
                     </Text>

@@ -17,22 +17,22 @@ const ProfilePosts = () => {
 			gap={1}
 			columnGap={1}
 		>
-			{isLoading &&
+			{
+				isLoading ?
 				[0, 1, 2].map((_, idx) => (
 					<VStack key={idx} alignItems='flex-start' gap={4}>
 						<Skeleton w='full'>
 							<Box h='300px'>contents wrapped</Box>
 						</Skeleton>
 					</VStack>
-				))}
-
-			{!isLoading && (
+				))
+				:
 				<>
 					{posts.map((post) => (
-						<ProfilePost post={post} key={post.id} />
+						<ProfilePost post={post} key={post.id}/>
 					))}
 				</>
-			)}
+			}
 		</Grid>
 	);
 };
