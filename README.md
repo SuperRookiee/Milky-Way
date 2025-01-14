@@ -7,6 +7,9 @@
 ![js](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)&ensp;
 
 
+## Git
+[https://github.com/SuperRookiee/Milky-Way](https://github.com/SuperRookiee/Milky-Way)
+
 ## Instagram Clone Project
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=1000&background=FFFFFF00&multiline=true&repeat=false&random=false&width=600&height=60&lines=This+project+is+a+clone+of+Instagram;+built+using+React%2C+Vite%2C+Firebase+and+Chakra+UI.)](https://git.io/typing-svg)
 
