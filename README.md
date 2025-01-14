@@ -12,6 +12,7 @@
 
 ## Demo
 You can check out the demo site at [https://milkyway-bfac7.web.app](https://milkyway-bfac7.web.app/)
+(2025.01 : Unable to host due to firebase cost policy change issue)
 
 ## References
 This project was created with reference to the Git project at [burakorkmez/instagram-clone](https://github.com/burakorkmez/instagram-clone)
